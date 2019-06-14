@@ -14,7 +14,7 @@
  Date: 01/07/2018 22:33:26
 */
 
-SET NAMES utf8mb4;
+SET NAMES utf8mb4; -- set system session variable
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
@@ -58,11 +58,11 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'root', 1, '202cb962ac59075b964b07152d234b70');
-INSERT INTO `user` VALUES (41, 'user1', 4, '202cb962ac59075b964b07152d234b70');
-INSERT INTO `user` VALUES (42, 'user2', 2, '202cb962ac59075b964b07152d234b70');
-INSERT INTO `user` VALUES (43, 'user4', 3, '202cb962ac59075b964b07152d234b70');
-INSERT INTO `user` VALUES (44, 'user3', 4, '202cb962ac59075b964b07152d234b70');
-INSERT INTO `user` VALUES (45, 'user6', 2, '202cb962ac59075b964b07152d234b70');
+INSERT INTO `user` VALUES (1, 'root', 1, '098f6bcd4621d373cade4e832627b4f6'); -- password test,  echo -n test | md5sum
+INSERT INTO `user` VALUES (41, 'user1', 4, '098f6bcd4621d373cade4e832627b4f6');
+INSERT INTO `user` VALUES (42, 'user2', 2, '098f6bcd4621d373cade4e832627b4f6');
+INSERT INTO `user` VALUES (43, 'user4', 3, '098f6bcd4621d373cade4e832627b4f6');
+INSERT INTO `user` VALUES (44, 'user3', 4, '098f6bcd4621d373cade4e832627b4f6');
+INSERT INTO `user` VALUES (45, 'user6', 2, '098f6bcd4621d373cade4e832627b4f6');
 
 SET FOREIGN_KEY_CHECKS = 1;
