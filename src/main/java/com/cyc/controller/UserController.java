@@ -4,6 +4,7 @@ import com.cyc.pojo.User;
 import com.cyc.service.UserRelationService;
 import com.cyc.service.imp.BlogServiceImp;
 import com.cyc.service.imp.UserServiceImp;
+import com.cyc.util.HeadPicUtil;
 import com.cyc.util.SessionUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -51,7 +52,11 @@ public class UserController {
     @ResponseBody
     public String getUserHeadPic(String userName) {
         User user = userServiceImp.getUserByUserName(userName);
-        return user.getHeadpic() + "";
+        if(user != null){
+            return user.getHeadpic() + "";
+        } else {
+            return HeadPicUtil.PIC_NOT_FOUND + "";
+        }
     }
 
 

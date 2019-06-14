@@ -3,6 +3,7 @@ $(document).ready(function ()
     /** 全局变量 **/
     var MyApp = {};
     MyApp.HEAD_PIC_NUM = 4;
+    HEAD_PIC_NOT_FOUND = "-1";
 
     var userNameInput = $("input[name=userName]");
 
@@ -20,7 +21,9 @@ $(document).ready(function ()
             },
             success: function (headpic)
             {
-                replaceHeadPic(headpic);
+                if(headpic != HEAD_PIC_NOT_FOUND){
+                    replaceHeadPic(headpic);
+                }
             },
             error: function (data, type, err)
             {
