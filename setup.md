@@ -13,6 +13,7 @@
 docker run, 同样要修改为绝对路径
 
 `docker run -p 3306:3306 --name master-mysql -v config/master-my.cnf:/etc/my.cnf -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7.25`
+
 `docker run -p 3307:3306 --name slave-mysql -v config/slave-my.cnf:/etc/my.cnf -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7.25`
 
 master-mysql 创建数据库
@@ -23,7 +24,7 @@ master-mysql 复制sql文件
 
 `docker cp src/main/webapp/database/microblog.sql master-mysql:.`
 
-master-mysql, 初始化数据库
+master-mysql 初始化数据库
 
 `mysql -u root -p test < ./microblog.sql`
 
@@ -45,9 +46,11 @@ slave_mysql.sql:
 复制sql脚本到容器
 
 `docker cp scripts/master_mysql.sql master-mysql:.`
+
 `docker cp scripts/slave_mysql.sql slave-mysql:.`
 
 运行sql脚本
 
 `mysql -u root -p test < ./master_mysql.sql`
+
 `mysql -u root -p < ./slave_mysql.sql`
