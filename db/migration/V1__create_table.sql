@@ -14,12 +14,9 @@
  Date: 01/07/2018 22:33:26
 */
 
-SET NAMES utf8mb4; -- set system session variable
+SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
--- ----------------------------
--- Table structure for blog
--- ----------------------------
 DROP TABLE IF EXISTS `blog`;
 CREATE TABLE `blog`  (
   `blogid` int(11) NOT NULL AUTO_INCREMENT,
@@ -29,9 +26,6 @@ CREATE TABLE `blog`  (
   PRIMARY KEY (`blogid`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_general_mysql500_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Records of blog
--- ----------------------------
 INSERT INTO `blog` VALUES (12, 41, '2018-07-01 21:48:57', '解说员：“梅西失望的不是这场比赛，而是阿根廷足球的这个时代。” ​​​​');
 INSERT INTO `blog` VALUES (13, 1, '2018-07-01 22:27:20', '最近十年，梅西和 C 罗包揽了世界足坛几乎所有的个人荣誉。谁也没想到，世界杯淘汰赛首轮首日，“梅罗” 竟同时出局，让我们表示深深的遗憾。人生就是这样，在残酷的竟争中，不是崛起，就是倒下，无论怎样我们都要做到胜不骄，败不馁，永远保持一颗奋斗的心！');
 INSERT INTO `blog` VALUES (14, 1, '2018-07-01 22:27:32', '10 岁就是球王！姆巴佩童年踢球珍贵视频曝光！从小便开挂！');
@@ -43,9 +37,6 @@ INSERT INTO `blog` VALUES (19, 43, '2018-07-01 22:29:24', '从小白到老白，
 INSERT INTO `blog` VALUES (20, 44, '2018-07-01 22:30:38', '今晚拉莫斯将追平卡西的 17 场世界杯出场记录，并列成为世界杯出场次数最多的西班牙人！！');
 INSERT INTO `blog` VALUES (21, 43, '2018-07-01 22:31:12', '今晚世界杯 1/8 决赛重量级对决，今晚 22:00 西班牙 vs 俄罗斯！明天凌晨 02:00 克罗地亚 vs 丹麦！你看好哪只球队晋级？');
 
--- ----------------------------
--- Table structure for user
--- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
   `userid` int(11) NOT NULL AUTO_INCREMENT,
@@ -55,10 +46,7 @@ CREATE TABLE `user`  (
   PRIMARY KEY (`userid`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 46 CHARACTER SET = utf8 COLLATE = utf8_general_mysql500_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Records of user
--- ----------------------------
-INSERT INTO `user` VALUES (1, 'root', 1, '098f6bcd4621d373cade4e832627b4f6'); -- password test,  echo -n test | md5sum
+INSERT INTO `user` VALUES (1, 'root', 1, '098f6bcd4621d373cade4e832627b4f6');
 INSERT INTO `user` VALUES (41, 'user1', 4, '098f6bcd4621d373cade4e832627b4f6');
 INSERT INTO `user` VALUES (42, 'user2', 2, '098f6bcd4621d373cade4e832627b4f6');
 INSERT INTO `user` VALUES (43, 'user4', 3, '098f6bcd4621d373cade4e832627b4f6');

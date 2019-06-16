@@ -364,6 +364,19 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>5.2.4</version>
+                <configuration>
+                    <user>root</user>
+                    <password>123456</password>
+                    <schemas>test</schemas>
+                    <url>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8</url>
+                    <driver>com.mysql.jdbc.Driver</driver>
+                    <locations>filesystem:db/migration</locations>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
