@@ -371,8 +371,10 @@
                 <configuration>
                     <user>root</user>
                     <password>123456</password>
-                    <schemas>test</schemas>
-                    <url>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8</url>
+                    <url>jdbc:mysql://localhost:3306/?useUnicode=true&amp;characterEncoding=UTF-8</url>
+                    <schemas>
+                        <schema>test</schema>
+                    </schemas>
                     <driver>com.mysql.jdbc.Driver</driver>
                     <locations>filesystem:db/migration</locations>
                 </configuration>
